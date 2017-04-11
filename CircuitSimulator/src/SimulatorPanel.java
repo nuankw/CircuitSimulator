@@ -1,6 +1,7 @@
 import java.awt.Dimension;
 import javax.swing.JPanel;
 import java.awt.BasicStroke;
+import java.awt.Color;
 
 public class SimulatorPanel extends JPanel{
 	public static final int WIDTH = 900;
@@ -8,7 +9,7 @@ public class SimulatorPanel extends JPanel{
 	public SimulatorPanel() {
 		super();
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
-		//setBackground(Color.BLACK);
+		setBackground(Color.BLACK);
 		setFocusable(true);
 		setDoubleBuffered(true);
 		requestFocus();
