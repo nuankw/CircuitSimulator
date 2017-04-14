@@ -5,18 +5,20 @@ public abstract class AbstractComponent {
 //	ArrayList<AbstractComponent> toTheNeg = new ArrayList<>();
 	double xPos;
 	double yPos;
-	boolean isReal; // 0 if for Menu, 1 if real
+	final boolean isReal; // 0 if for Menu, 1 if real
 
-	void setCoordinates(double x, double y) {
-		xPos = x;
-		yPos = y;
+	public double getxPos() {
+		return xPos;
 	}
-	
-	double[] getCoordinates() {
-		double[] returnCor= {xPos,yPos};
-		return returnCor;
+	public double getyPos() {
+		return yPos;
 	}
-	
+	public void setxPos(double xPos) {
+		this.xPos = xPos;
+	}
+	public void setyPos(double yPos) {
+		this.yPos = yPos;
+	}
 	boolean isReal() {
 		return isReal;
 	}
