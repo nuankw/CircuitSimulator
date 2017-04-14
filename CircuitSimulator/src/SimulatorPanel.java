@@ -13,7 +13,6 @@ public class SimulatorPanel extends JPanel{
 		setFocusable(true);
 		setDoubleBuffered(true);
 		requestFocus();
-		
 		//addKeyListener(this);
 		//addMouseListener(this);
 		//addMouseMotionListener(this);
