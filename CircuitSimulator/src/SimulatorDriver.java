@@ -14,7 +14,7 @@ public class SimulatorDriver {
 		while(true){
 			//Panel.update();
 			Panel.repaint();
-			Thread.sleep(1000 / 60);
+			Thread.sleep(1000 / 60); 
 		}	
 	}
 }
