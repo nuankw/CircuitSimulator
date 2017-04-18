@@ -1,9 +1,11 @@
+package Components;
+import java.awt.Image;
 
 public class Power extends AbstractComponent{
 	double voltage;
 	double maxPower;
-	public Power(double x, double y, boolean i, double v, double m) {
-		super(x, y, i);
+	public Power(double x, double y, boolean i, Image image, double v, double m) {
+		super(x, y, i, image);
 		voltage = v;
 		maxPower = m;
 	}

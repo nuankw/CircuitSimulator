@@ -1,10 +1,13 @@
+package Components;
+import java.awt.Image;
 
-public class Resistor extends AbstractComponent{
+public abstract class AbstractResistor extends AbstractComponent{
 	double resistance;
 	double currenct;
 	double volt;
-	public Resistor(double x, double y, boolean i, double r, double c, double v) {
-		super(x, y, i);
+	public AbstractResistor(double x, double y, boolean i, Image image, // component
+							double r, double c, double v) { // resistor
+		super(x, y, i, image);
 		resistance = r;
 		currenct = c;
 		volt = v;
@@ -27,5 +30,4 @@ public class Resistor extends AbstractComponent{
 	public void setVolt(double volt) {
 		this.volt = volt;
 	}
-	
 }
