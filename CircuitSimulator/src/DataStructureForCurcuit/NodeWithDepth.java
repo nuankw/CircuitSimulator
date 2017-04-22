@@ -1,14 +1,24 @@
 package DataStructureForCurcuit;
 
+import java.util.ArrayList;
+
 public class NodeWithDepth <T> {
-	NodeWithDepth<T> Parent = null;
-	NodeWithDepth<T> Destionation = null;
+	ArrayList<NodeWithDepth<T> > Parent = null;
+	ArrayList<NodeWithDepth<T> > Destination = null;
 	int depth;
 	T element;
 	
-	public NodeWithDepth(NodeWithDepth<T> from, NodeWithDepth<T> to, int d, T entry) {
-		Destionation = to;
-		Parent = from;
+	public NodeWithDepth(ArrayList<NodeWithDepth<T>> prevNodes, ArrayList<NodeWithDepth<T>> nextNodes, int d, T entry) {
+		for (int i = 0; i < prevNodes.size(); i++) {
+			if(prevNodes != null) {
+				Destination.add(nextNodes.get(i));
+			}
+		}
+		for (int i = 0; i < nextNodes.size(); i++) {
+			if(nextNodes != null) {
+				Parent.add(prevNodes.get(i));
+			}
+		}
 		depth = d;
 		element = entry;
 	}
@@ -16,25 +26,42 @@ public class NodeWithDepth <T> {
 	public int getDepth() {
 		return depth;
 	}
-	public NodeWithDepth<T> getDestionation() {
-		return Destionation;
+	public ArrayList<NodeWithDepth<T> > getDestination() {
+		return Destination;
 	}
 	public T getElement() {
 		return element;
 	}
-	public NodeWithDepth<T> getParent() {
+	public ArrayList<NodeWithDepth<T> > getParent() {
 		return Parent;
 	}
 	public void setDepth(int depth) {
 		this.depth = depth;
 	}
-	public void setDestionation(NodeWithDepth<T> destionation) {
-		Destionation = destionation;
+	public void addDestination(NodeWithDepth<T> destination) {
+		if (destination != null) {
+			Destination.add(destination);
+		}
+	}
+	public void removeDestination(NodeWithDepth<T> destination) {
+		for(int i=0; i<Destination.size(); i++) {
+			if(destination.equals(Destination.get(i))) {
+				Destination.remove(i);
+			}
+		}
 	}
 	public void setElement(T element) {
 		this.element = element;
 	}
-	public void setParent(NodeWithDepth<T> parent) {
-		Parent = parent;
+	public void addParent(NodeWithDepth<T> parent) {
+		Parent.add(parent);
 	}
+	public void removeParent(NodeWithDepth<T> parent) {
+		for(int i=0; i<Parent.size(); i++) {
+			if(parent.equals(Parent.get(i))) {
+				Parent.remove(i);
+			}
+		}
+	}
+	
 }

@@ -6,6 +6,7 @@ public abstract class AbstractComponent {
 	// if multiple elements in lists, then they are all parallel
 	ArrayList<AbstractComponent> fromList = new ArrayList<>(); 
 	ArrayList<AbstractComponent> toList = new ArrayList<>();
+	ArrayList<AbstractComponent> connected = new ArrayList<>();
 	Image image;
 	
 	double xPos;
