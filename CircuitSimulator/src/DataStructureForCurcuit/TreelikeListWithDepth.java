@@ -22,6 +22,13 @@ public class TreelikeListWithDepth <T> {
 //		this.head = head;
 //	}
 	
+	public int getMaxDepth() {
+		return maxDepth;
+	}
+	public ArrayList<NodeWithDepth<T>> getInventory() {
+		return inventory;
+	}
+	
 	public void add(T thisComponent, T[] prevComponents, T[] nextComponents, int toDepth) { 
 		if (toDepth > maxDepth + 1) {
 			// wish it would not happen
